@@ -8,6 +8,7 @@ The shell script `cava.sh` is exactly the same as in [polybar-cava](https://gith
 
 - Overlay
 <img src="./cava-playerinfo-overlay/screenshot.png" title="overlay">
+<img src="./cava-playerinfo-overlay/gif.gif" title="overlay-gif">
 
 - [ray-pH](https://github.com/ray-pH)'s personal config
 <img src="./pH-personal-config/screenshot.png" title="ray-pH's personal config">
