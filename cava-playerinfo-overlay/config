@@ -1,0 +1,35 @@
+[
+    {
+        "height": 30,
+        "modules-center": ["custom/playerinfo"],
+        "custom/playerinfo": {
+            "format": "&lt; {} &gt;",
+            "exec": "~/.config/waybar/playerinfo.sh",
+            "escape": true,
+            "return-type": "json",
+            "interval": 1,
+            "tooltip": true,
+            "on-click-middle": "playerctl play-pause",
+            "on-click-right": "playerctl next",
+            "on-click-left": "playerctl previous"
+        }
+    },
+    {
+        "name": "overlay",
+        "height": 30,
+        "width": 300,
+
+        // i had some problem with `"mode" : "overlay"` so i use these properties
+        "layer": "bottom",
+        "position": "top", 
+        "margin-top": -30,
+        "exclusive": false,
+        "passtrough": true,
+
+        "modules-center": ["custom/cava"],
+        "custom/cava": {
+            "format": "{}",
+            "exec": "~/.config/waybar/cava.sh"
+        },
+    },
+]

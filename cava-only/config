@@ -1,0 +1,7 @@
+{
+    "modules-center": ["custom/cava"],
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh"
+    }
+},

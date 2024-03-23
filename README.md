@@ -1,49 +1,30 @@
-Simple [CAVA](https://github.com/karlstav/cava) (music visualization) module for [polybar](https://github.com/polybar/polybar). Download `cava.sh` and put it on your config or module folder.
+Simple [CAVA](https://github.com/karlstav/cava) (music visualization) module for [waybar](https://github.com/Alexays/Waybar).
 
-<details>
-    <summary>Screenshot</summary>
-    <img src="./img/screenshot.png" title="screenshot">
-</details>
+The shell script `cava.sh` is exactly the same as in [polybar-cava](https://github.com/ray-pH/polybar-cava). I just add waybar config examples in this repo.
 
-<details>
-    <summary>Aimated GIF</summary>
-    <img src="./img/animated.gif" title="animated">
-</details>
+## Screenshots
+- Side-by-side
+<img src="./cava-playerinfo-side/screenshot.png" title="side-by-side">
+
+- Overlay
+<img src="./cava-playerinfo-overlay/screenshot.png" title="overlay">
+
+- [ray-pH](https://github.com/ray-pH)'s personal config
+<img src="./pH-personal-config/screenshot.png" title="ray-pH's personal config">
+
+## Usage
 
 Dependencies:
 - CAVA
-- polybar
+- waybar
 - font that support unicode U+2581 to U+2588 (▁▂▃▄▅▆▇█). Most [unicode fonts](https://en.wikipedia.org/wiki/Unicode_font) should support these characters
+- playerctl (optional: for `playerinfo.sh`)
 
-On your polybar config, add these lines
-```ini
-[module/cava]
-type = custom/script
-tail = true
-exec = $HOME/.config/polybar/cava.sh
-format = <label>
-format-font = 5
-label = %output%
-```
+If you also like to have the media information in the bar, you can use the `playerinfo.sh` script. It uses `playerctl` to get the media information.
 
-change `exec` value to where you put `cava.sh`.
+## Note
 
-You can change the number of bar by modifying the cava config section in `cava.sh`.
-```
-[general]
-bars = 10
-```
-
-You can also modify the label foreground like this
-```
-[module/cava]
-label-foreground = #594751
-```
-<details>
-    <summary>Color changed</summary>
-    <img src="./img/color-changed.png" title="changed color">
-</details>
-
-## Usability in other status-bar application
-The script `cava.sh` can be used in another status-bar app like Waybar. In theory, any app that can display unicode characters can use the script.
-`cava.sh` is a standalone script that does not require polybar and just outputting text (unicode). You can even try running it directly in the terminal to see the output.
+> [!NOTE]
+> When the waybar is killed (or restarted), the cava process will still be running. You can kill it manually using `pkill cava` or add a script to kill it automatically when the waybar is killed.
+> (https://github.com/Alexays/Waybar/issues/358)
+> (https://github.com/Alexays/Waybar/issues/121)

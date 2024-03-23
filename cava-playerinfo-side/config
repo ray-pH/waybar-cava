@@ -1,0 +1,19 @@
+{
+    "height": 30,
+    "modules-center": ["custom/cava", "custom/playerinfo"],
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/cava.sh"
+    },
+    "custom/playerinfo": {
+        "format": "&lt; {} &gt;",
+        "exec": "~/.config/waybar/playerinfo.sh",
+        "escape": true,
+        "return-type": "json",
+        "interval": 1,
+        "tooltip": true,
+        "on-click-middle": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-left": "playerctl previous"
+    }
+},

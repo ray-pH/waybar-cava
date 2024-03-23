@@ -1,0 +1,14 @@
+* {
+    font-family: "GohuFont uni11 Nerd Font", "Noto Sans CJK KR", "Noto Sans CJK JP", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(43, 48, 59, 0.7); /* make sure the bar is transparent */
+    color: #ffffff;
+}
+
+#custom-cava {
+    font-size: 24;
+    margin-right: 10px;
+}
